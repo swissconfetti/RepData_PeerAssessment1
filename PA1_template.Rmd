@@ -97,7 +97,7 @@ The total number of missing values in the dataset is:
 indexNAs <- is.na(csvData$steps)
 print(sum(indexNAs))
 ```
-The total number of *days containing missing values* in the dataset is:
+The total number of **days containing missing values** in the dataset is:
 ```{r}
 print(length(unique(csvData$date[indexNAs])))
 ```
@@ -169,3 +169,5 @@ plot(x = intervals,
      ylab = "weekends",
      ylim = c(0,250))
 ```
+
+It looks like the user tends to sleep later on weekends (there is not the sharp increase in steps just after 5 am as on weekdays) and stay up later (steps do not drop off until after 8 pm).
